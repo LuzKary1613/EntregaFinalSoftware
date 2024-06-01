@@ -6,21 +6,27 @@
   </head>
   <body>
     <h1>Edit Item</h1>
+    <!-- Formulario para editar un ítem existente -->
     <form action="{{ url_for('main.edit_item', sku=item.sku) }}" method="POST">
+      <!-- Campo de entrada para el nombre del ítem -->
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" value="{{ item.name }}"><br><br>
+      <!-- Campo de entrada para la descripción del ítem -->
       <label for="description">Description:</label>
       <input type="text" id="description" name="description" value="{{ item.description }}"><br><br>
+      <!-- Campo de entrada para el precio del ítem -->
       <label for="price">Price:</label>
       <input type="text" id="price" name="price" value="{{ item.price }}"><br><br>
+      <!-- Campo de entrada para la cantidad del ítem -->
       <label for="quantity">Quantity:</label>
       <input type="text" id="quantity" name="quantity" value="{{ item.quantity }}"><br><br>
+      <!-- Campo de entrada para la fecha de expiración del ítem -->
       <label for="expiration_date">Expiration Date:</label>
       <input type="text" id="expiration_date" name="expiration_date" value="{{ item.expiration_date }}"><br><br>
+      <!-- Botón para enviar el formulario y actualizar el ítem -->
       <input type="submit" value="Update Item">
     </form>
   </body>
 </html>
-
 
 
