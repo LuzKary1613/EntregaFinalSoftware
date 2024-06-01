@@ -69,7 +69,7 @@ LINK DEL VIDEO: https://youtu.be/RVCQ_3VRhiI
 9) Top 5 de caracteristicas de arquitectura del diseño actual del proyecto
 
       I. Modularidad:
-          Este proyecto está estructurado en módulos claramente definidos como models.py para los modelos de datos, routes.py para los controladores, y plantillas HTML para las vistas. Esta separación facilita el                    mantenimiento y la escalabilidad.
+          Este proyecto está estructurado en módulos claramente definidos como models.py para los modelos de datos, routes.py para los controladores, y plantillas HTML para las vistas. Esta separación facilita el mantenimiento y la escalabilidad.
 
       II. Uso de Patrones de Diseño:
           Cómo lo cumple:
@@ -80,29 +80,29 @@ LINK DEL VIDEO: https://youtu.be/RVCQ_3VRhiI
           Factory Pattern: La función create_app() en __init__.py sigue el patrón Factory.
 
       III. Abstracción de la Base de Datos:
-          Este proyecto utiliza SQLAlchemy como ORM, lo que proporciona una abstracción de las operaciones de base de datos. Esto permite realizar operaciones CRUD de manera eficiente y facilita cambios en el modelo de              datos sin afectar otras partes del sistema.
+          Este proyecto utiliza SQLAlchemy como ORM, lo que proporciona una abstracción de las operaciones de base de datos. Esto permite realizar operaciones CRUD de manera eficiente y facilita cambios en el modelo de datos sin afectar otras partes del sistema.
 
       IV. Uso de Blueprints:
           Utiliza Blueprints en Flask para modularizar las rutas, lo que permite organizar las rutas de manera modular, mejorando la mantenibilidad y la organización del código.
 
       V. Configuración Centralizada:
-         La configuración de la aplicación se gestiona en un solo lugar (`config.py`), lo que facilita la gestión y modificación de las configuraciones, lo que simplifica la administración de la configuración y permite             cambios rápidos sin modificar múltiples archivos.
+         La configuración de la aplicación se gestiona en un solo lugar (`config.py`), lo que facilita la gestión y modificación de las configuraciones, lo que simplifica la administración de la configuración y permite cambios rápidos sin modificar                   múltiples archivos.
 
 10) Top 5 Características de Arquitectura en una Migración a Microservicios
 
       I.Desacoplamiento de Servicios
-            Justificación: Cada funcionalidad de la aplicación (gestión de inventario, autenticación, procesamiento de pagos, etc.) se implementaría como un servicio independiente. Esto permite desarrollar, desplegar y               escalar cada servicio de manera independiente, mejorando la flexibilidad y la escalabilidad. Por ejemplo, el servicio de gestión de inventario podría escalarse de forma independiente del servicio de                       autenticación, optimizando el uso de recursos.
+            Justificación: Cada funcionalidad de la aplicación (gestión de inventario, autenticación, procesamiento de pagos, etc.) se implementaría como un servicio independiente. Esto permitiría desarrollar, desplegar y escalar cada servicio de manera                             independiente, mejorando la flexibilidad y la escalabilidad. Por ejemplo, el servicio de gestión de inventario podría escalarse de forma independiente del servicio de autenticación, optimizando el uso de recursos.
             
       II. Comunicación basada en APIs
-            Justificación: Los microservicios se comunicarían entre sí a través de APIs RESTful o mensajería asincrónica. Esto facilita la integración entre servicios y permite que cada servicio sea desarrollado en                   tecnologías diferentes si es necesario. Además, la comunicación basada en APIs estandariza las interacciones y facilita la colaboración entre equipos de desarrollo.
+            Justificación: Los microservicios se comunicarían entre sí a través de APIs RESTful o mensajería asincrónica. Esto facilitaría la integración entre servicios y permitiría que cada servicio sea desarrollado en tecnologías diferentes si es                                 necesario. Además, la comunicación basada en APIs estandarizaría las interacciones y facilitaría la colaboración entre equipos de desarrollo.
 
       III. Escalabilidad Independiente
-            Justificación: Cada microservicio se puede escalar de manera independiente según las necesidades de carga. Esto optimiza el uso de recursos y mejora el rendimiento de la aplicación al permitir la                          escalabilidad selectiva de componentes críticos. Por ejemplo, si el servicio de conversión de monedas recibe más tráfico, solo este servicio puede escalarse sin necesidad de escalar toda la aplicación.
+            Justificación: Cada microservicio se podría escalar de manera independiente según las necesidades de carga. Esto optimizaría el uso de recursos y mejoraría el rendimiento de la aplicación al permitir la escalabilidad selectiva de componentes críticos. Por               ejemplo, si el servicio de conversión de monedas recibe más tráfico, solo este servicio podría escalarse sin necesidad de escalar toda la aplicación.
 
       IV. Despliegue Continuo (CI/CD)
-            Justificación: Los microservicios facilitan la implementación de pipelines de integración y entrega continua (CI/CD), permitiendo despliegues rápidos y seguros. Esto acelera el ciclo de desarrollo y reduce el             tiempo de entrega de nuevas funcionalidades y correcciones. Cada microservicio puede ser desplegado independientemente, lo que minimiza el impacto en el sistema general y permite una rápida iteración.
+            Justificación: Los microservicios facilitarían la implementación de pipelines de integración y entrega continua (CI/CD), permitiendo despliegues rápidos y seguros. Esto aceleraría el ciclo de desarrollo y reduciría el tiempo de entrega de nuevas                         funcionalidades y correcciones. Cada microservicio podría ser desplegado independientemente, lo que minimizaría el impacto en el sistema general y permitiría una rápida iteración.
 
       V. Resiliencia y Tolerancia a Fallos
-            Justificación: La arquitectura de microservicios puede implementar patrones de diseño para mejorar la resiliencia, como circuit breakers y retry mechanisms. Esto mejora la disponibilidad y la robustez de la               aplicación al aislar fallos y gestionar mejor los errores y fallos de componentes individuales. Por ejemplo, si un microservicio falla, los demás pueden seguir funcionando, y se pueden aplicar estrategias                 de reintento y recuperación para minimizar el impacto del fallo.
+            Justificación: La arquitectura de microservicios podría implementar patrones de diseño para mejorar la resiliencia, como circuit breakers y retry mechanisms. Esto mejoraría la disponibilidad y la robustez de la aplicación al aislar fallos y                              gestionaría mejor los errores y fallos de componentes individuales. Por ejemplo, si un microservicio falla, los demás podrían seguir funcionando, y se podrían aplicar estrategias de reintento y recuperación para minimizar el impacto del fallo.
 
     
