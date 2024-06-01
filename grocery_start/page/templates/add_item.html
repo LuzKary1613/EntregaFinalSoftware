@@ -6,27 +6,36 @@
 </head>
 <body>
     <h1>Add New Item</h1>
+    <!-- Formulario para agregar un nuevo ítem -->
     <form action="{{ url_for('main.add_item_view') }}" method="POST">
+        <!-- Campo de entrada para el SKU del ítem -->
         <label for="sku">SKU:</label>
         <input type="text" id="sku" name="sku" required><br>
         
+        <!-- Campo de entrada para el nombre del ítem -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
         
+        <!-- Campo de entrada para la descripción del ítem -->
         <label for="description">Description:</label>
         <input type="text" id="description" name="description" required><br>
         
+        <!-- Campo de entrada para el precio del ítem -->
         <label for="price">Price:</label>
         <input type="text" id="price" name="price" required><br>
         
+        <!-- Campo de entrada para la cantidad del ítem -->
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" required><br>
         
+        <!-- Campo de entrada para la fecha de expiración del ítem -->
         <label for="expiration_date">Expiration Date:</label>
         <input type="date" id="expiration_date" name="expiration_date" required><br>
         
+        <!-- Botón para enviar el formulario y agregar el ítem -->
         <button type="submit">Add Item</button>
     </form>
+    <!-- Enlace para volver a la lista de ítems -->
     <a href="{{ url_for('main.index') }}">Back to List</a>
 </body>
 </html>
