@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Items List</title>
+  </head>
+  <body>
+    <h1>Items List</h1>
+
+    <!-- Formulario para seleccionar la moneda -->
+    <form method="GET" action="/">
+      <label for="currency">Select Currency:</label>
+      <select id="currency" name="currency">
+        <option value="USD">USD</option>
+        <option value="MXN">MXN</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <!-- Puedes agregar más opciones según tus necesidades -->
+      </select>
+      <button type="submit">Convert</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>SKU</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Expiration Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ item.sku }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.expiration_date }}</td>
+          <td>
+            <a href="{{ url_for('main.edit_item', sku=item.sku) }}">Edit</a> |
+            <form action="{{ url_for('main.delete_item', sku=item.sku) }}" method="POST" style="display:inline;">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" onclick="return confirm('Are you sure?');">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('main.add_item_view') }}">Add New Item</a>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Item</title>
+  </head>
+  <body>
+    <h1>Edit Item</h1>
+    <form action="{{ url_for('main.edit_item', sku=item.sku) }}" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="{{ item.name }}"><br><br>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" value="{{ item.description }}"><br><br>
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" value="{{ item.price }}"><br><br>
+      <label for="quantity">Quantity:</label>
+      <input type="text" id="quantity" name="quantity" value="{{ item.quantity }}"><br><br>
+      <label for="expiration_date">Expiration Date:</label>
+      <input type="text" id="expiration_date" name="expiration_date" value="{{ item.expiration_date }}"><br><br>
+      <input type="submit" value="Update Item">
+    </form>
+  </body>
+</html>
+
+
+
