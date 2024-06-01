@@ -1,5 +1,7 @@
 # PROYECTO FINAL DE LA MATERIA DISEÑO Y ARQUITECTURA DE SOFTWARE #
 
+LINK DEL VIDEO: https://youtu.be/RVCQ_3VRhiI 
+
 1) Descripción
 
       Este proyecto es una aplicación web para gestionar un inventario de comestibles, permitiendo a los usuarios realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los ítems del inventario. La aplicación       está construida con Flask, utiliza SQLAlchemy para la interacción con la base de datos y permite la carga de datos desde archivos CSV.
